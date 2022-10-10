@@ -1,5 +1,5 @@
-import "../App.css";
-import logo from "./prs.jpg";
+import "../scss/App.scss";
+import logo from "../imgs/prs.jpg";
 import CartWidget from "./CartWidget";
 
 

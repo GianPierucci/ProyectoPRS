@@ -1,4 +1,4 @@
-import "../App.css"
+import "../scss/App.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 
