@@ -1,13 +1,15 @@
-
 import './scss/App.scss';
 import NavBar from "./components/NavBar"
-import ItemListContainer from './components/ItemListContainer';
+import Main from "./components/Main"
+
+//import ItemListContainer from './components/ItemListContainer';
 
 function App() {
   return (
     <div>
       <NavBar />
-      <ItemListContainer greeting={"Bienvenidos a PRS"}/>
+      <Main />
+      
     </div>
 
   );

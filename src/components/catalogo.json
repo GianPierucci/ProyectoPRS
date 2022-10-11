@@ -1,0 +1,45 @@
+[
+    {
+        "id": 1,
+        "nombre": "Cortina Roller",
+        "tipo": "BlackOut",
+        "color": "Beige"
+    },
+    {
+        "id": 2,
+        "nombre": "Cortina Roller",
+        "tipo": "BlackOut",
+        "color": "Marron"
+    },
+    {
+        "id": 3,
+        "nombre": "Cortina Roller",
+        "tipo": "BlackOut",
+        "color": "Negra"
+    },
+    {
+        "id": 4,
+        "nombre": "Cortina Roller",
+        "tipo": "Sunscreen",
+        "color": "Beige"
+    },
+    {
+        "id": 5,
+        "nombre": "Cortina Roller",
+        "tipo": "Sunscreen",
+        "color": "Blanca"
+    },
+    {
+        "id": 6,
+        "nombre": "Cortina Roller",
+        "tipo": "Sunscreen",
+        "color": "Gris"
+    },
+    {
+        "id": 7,
+        "nombre": "Cortina Roller",
+        "tipo": "Translucida",
+        "color": "Negra"
+    }
+]
+

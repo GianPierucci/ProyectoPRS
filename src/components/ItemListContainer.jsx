@@ -1,6 +1,6 @@
-const ItemListContainer = ({greeting}) => {
+const ItemListContainer = () => {
     return(
-       <h1 style={{"text-align": "center"}}>{greeting}</h1>
+       <div></div>
     )
 }
 
