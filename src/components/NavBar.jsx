@@ -3,6 +3,7 @@ import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import logo from "../imgs/prs.jpg";
 import CartWidget from "./CartWidget";
+import { NavLink, Link } from "react-router-dom";
 
 
 
@@ -13,9 +14,9 @@ const NavBar = () => {
             <button className="botonAbrir" id="btnAbr"><FontAwesomeIcon className="faBars" icon={faBars}/></button>
             <ul className="ul menu-abierto">
                 <button className="botonCerrar" id="btnCerr"><FontAwesomeIcon className="faXmark" icon={faXmark}/></button>
-                <li className="lis">Inicio</li>
-                <li className="lis">Catalogo</li>
-                <li className="lis">Nosotros</li>
+                <NavLink to="/" className="lis">Inicio</NavLink>
+                <NavLink to="/Catalogo"  className="lis">Catalogo</NavLink>
+                <NavLink to=""  className="lis">Nosotros</NavLink>
                 <CartWidget />
             </ul>
         </div>

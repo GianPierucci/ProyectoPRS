@@ -1,3 +1,10 @@
+body{
+  a{
+    text-decoration: none;
+  }
+}
+
+
 //  BARRA DE NAVEGACION
 
 /* .divRespons{
@@ -187,6 +194,28 @@
     h2 {
       font-size: 60px;
     }
+  }
+
+  .listContainer{
+    display: flex;
+    justify-content: center;
+  }
+
+  .itemsContainer{
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 200px;
+  }
+
+  .blackoutImg{
+    width: 200px;
+    height: 250px;
+  }
+
+  .prodCard{
+    background-color: #6bb5c4;
+    width: 200px;
+    margin: 20px;
   }
 
 }
