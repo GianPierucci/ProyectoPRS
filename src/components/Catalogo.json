@@ -2,44 +2,65 @@
     {
         "id": 1,
         "nombre": "Cortina Roller",
-        "tipo": "BlackOut",
-        "color": "Beige"
+        "tipo": "Blackout",
+        "color": "Beige",
+        "precio": 2500,
+        "img": "imgs/blackout.jpg",
+        "stock": 4
     },
     {
         "id": 2,
         "nombre": "Cortina Roller",
-        "tipo": "BlackOut",
-        "color": "Marron"
+        "tipo": "Blackout",
+        "color": "Marron",
+        "precio": 2500,
+        "img": "imgs/blackout.jpg",
+        "stock": 2
     },
     {
         "id": 3,
         "nombre": "Cortina Roller",
-        "tipo": "BlackOut",
-        "color": "Negra"
+        "tipo": "Blackout",
+        "color": "Negra",
+        "precio": 2500,
+        "img": "imgs/blackout.jpg",
+        "stock": 5
     },
     {
         "id": 4,
         "nombre": "Cortina Roller",
         "tipo": "Sunscreen",
-        "color": "Beige"
+        "color": "Beige",
+        "precio": 2300,
+        "img": "imgs/sunscreen.jpg",
+        "stock": 4
     },
     {
         "id": 5,
         "nombre": "Cortina Roller",
         "tipo": "Sunscreen",
-        "color": "Blanca"
+        "color": "Blanca",
+        "precio": 2300,
+        "img": "imgs/sunscreen.jpg",
+        "stock": 5
     },
     {
         "id": 6,
         "nombre": "Cortina Roller",
         "tipo": "Sunscreen",
-        "color": "Gris"
+        "color": "Gris",
+        "precio": 2300,
+        "img": "imgs/sunscreen.jpg",
+        "stock": 3
     },
     {
         "id": 7,
         "nombre": "Cortina Roller",
-        "tipo": "Translucida",
-        "color": "Negra"
+        "tipo": "Sunscreen",
+        "color": "Negra",
+        "precio": 2300,
+        "img": "imgs/sunscreen.jpg",
+        "stock": 5
     }
 ]
 
