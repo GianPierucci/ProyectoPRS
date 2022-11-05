@@ -21,13 +21,13 @@ const ItemDetail = ({ item }) => {
            
             <div className="cajaInfoDetalle">
                 <div>
-                    <h2>{item.nombre} {item.tipo}</h2>
+                    <h2>{item.Nombre} {item.Tipo}</h2>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum veritatis ipsam incidunt non in velit consectetur voluptatibus corrupti doloremque, facilis molestias culpa quo, dolorem minus, magni repudiandae soluta labore vel!
                     Aliquam nisi vitae ea iste, beatae voluptate unde odio sunt? Dolores in fugit similique, mollitia iste dolore ut? Dicta, natus. A natus beatae cumque error suscipit repellendus voluptates, nesciunt iusto.</p>
-                    <ItemContador botonAgr={botonAgr} stock={item.stock} inicial={1} />
+                    <ItemContador botonAgr={botonAgr} stock={item.Stock} inicial={1} />
                 </div>
                 <div className="precioDetalle">
-                    <h3>${item.precio}</h3>
+                    <h3>${item.Precio}</h3>
                     
                 </div>
                

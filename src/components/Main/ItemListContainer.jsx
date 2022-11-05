@@ -1,6 +1,6 @@
-
+import { collection, getDocs } from "firebase/firestore";
+import { database } from "../../services/firebaseConfig"
 import { useEffect, useState } from "react";
-import productos from "../Catalogo.json"
 import ItemList from "./ItemList";
 
 const ItemListContainer = () => {
@@ -9,30 +9,34 @@ const ItemListContainer = () => {
   const [cargando, setCargando] = useState(true);
 
   useEffect(() => {
-    const traerProductos = () => {
-      return new Promise((res, rej) => {
-        setTimeout(() => {
-          res(productos);
-        }, 2000);
-      })
-    }
-    traerProductos()
+
+    const coleccionProds = collection(database, "Productos")
+
+    getDocs(coleccionProds)
       .then((res) => {
-        setItems(res);
+        const productos = res.docs.map((prod) => {
+          return{
+            id: prod.id,
+            ...prod.data()
+          }
+        })
+        setItems(productos)
+        console.log(productos);
       })
       .catch((error) => {
-        console.log(error)
+        console.log(error);
       })
       .finally(() => {
-        setCargando(false)
+        setCargando(false);
       })
+
   }, []);
 
 
 
   return (
     <main>
-      { cargando ?
+      {cargando ?
         <div className="spinner"></div>
         : <div className="listContainer">
           <ItemList key={items.id} items={items} />
@@ -45,3 +49,23 @@ const ItemListContainer = () => {
 }
 
 export default ItemListContainer;
+
+
+
+/*  const traerProductos = () => {
+     return new Promise((res, rej) => {
+       setTimeout(() => {
+         res(productos);
+       }, 2000);
+     })
+   }
+   traerProductos()
+     .then((res) => {
+       setItems(res);
+     })
+     .catch((error) => {
+       console.log(error)
+     })
+     .finally(() => {
+       setCargando(false)
+     }) */

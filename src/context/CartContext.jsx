@@ -44,7 +44,7 @@ const Provider = ({children}) => {
         let acumulador = 0
         const copia = [...carrito]
         copia.forEach((prod) =>{
-            acumulador += (prod.precio * prod.cantidad)})
+            acumulador += (prod.Precio * prod.cantidad)})
         return acumulador
     }
  

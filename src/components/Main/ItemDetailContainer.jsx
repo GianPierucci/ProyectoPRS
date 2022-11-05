@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import productos from "../Catalogo.json"
 import ItemDetail from "./ItemDetail.jsx";
+import { collection, doc, getDoc } from "firebase/firestore";
+import { database } from "../../services/firebaseConfig"
 
 const ItemDetailContainer = () => {
 
@@ -12,24 +14,24 @@ const ItemDetailContainer = () => {
   
   useEffect(() => {
 
-    const traerProductos = () => {
-      return new Promise((res, rej) => {
-        const producto = productos.find((prod) => prod.id === Number(idProd))
-        setTimeout(() => {
-          res(producto);                
-        }, 1500);
+    const coleccionProdsDetails = collection(database, "Productos")
+      
+    const referenciaProd = doc(coleccionProdsDetails, idProd)
+
+    getDoc(referenciaProd)
+    .then((res) =>{
+      setItem({
+          id: res.id,
+          ...res.data()
       })
-    }
-    traerProductos()
-      .then((res) => {
-        setItem(res);
-      })
-      .catch((error) => {
-        console.log(error)
-      })
-      .finally(() => {
-        setCargando(false)
-      })
+    })
+    .catch((error) =>{
+      console.log(error)
+    })
+    .finally(() =>{
+      setCargando(false)
+    })
+    
   }, [idProd]);
 
 
@@ -48,3 +50,21 @@ const ItemDetailContainer = () => {
 }
 
 export default ItemDetailContainer;
+
+/* return new Promise((res, rej) => {
+  const producto = productos.find((prod) => prod.id === Number(idProd))
+  setTimeout(() => {
+    res(producto);                
+  }, 1500);
+})
+}
+traerProductos()
+.then((res) => {
+  setItem(res);
+})
+.catch((error) => {
+  console.log(error)
+})
+.finally(() => {
+  setCargando(false)
+}) */
