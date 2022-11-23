@@ -1,6 +1,6 @@
 import './scss/App.scss';
 import 'react-toastify/dist/ReactToastify.css';
-import { BrowserRouter, Routes, Route, Form } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./components/Header/NavBar"
 import Main from "./components/Main/Main"
 import ItemListContainer from './components/Main/ItemListContainer';
@@ -14,13 +14,14 @@ import Formulario from './components/Form/Formulario';
 
 function App() {
   return (
-    <Provider>
+    <Provider> 
       <BrowserRouter>
         <ToastContainer/>
         <NavBar />
         <Routes >
           <Route path="/" element={<Main />} />
           <Route path='/Catalogo' element={<ItemListContainer />} />
+          <Route path='/Catalogo/:categoria' element={<ItemListContainer />} />
           <Route path='/Producto/:idProd' element={<ItemDetailContainer />} />
           {/* <Route path='/Nosotros' element={<Nosotros />} /> */}
           <Route path='/Carrito' element={<Carrito />} />

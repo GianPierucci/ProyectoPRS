@@ -1,5 +1,3 @@
-//  BARRA DE NAVEGACION
-
 .spinner {
   margin: 500px auto;
   width: 56px;
@@ -9,25 +7,59 @@
   animation: spinner-bulqg1 0.8s infinite linear alternate,
     spinner-oaa3wk 1.6s infinite linear;
 }
+
 @keyframes spinner-bulqg1 {
-  0% {clip-path: polygon(50% 50%, 0 0, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);}
-  12.5% {clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%);}
-  25% {clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 100% 100%, 100% 100%);}
-  50% {clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%);}
-  62.5% {clip-path: polygon(50% 50%, 100% 0, 100% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%);}
-  75% {clip-path: polygon(50% 50%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 50% 100%, 0% 100%);}
-  100% {clip-path: polygon(50% 50%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 0% 100%);}
+  0% {
+    clip-path: polygon(50% 50%, 0 0, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
+  }
+
+  12.5% {
+    clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%);
+  }
+
+  25% {
+    clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 100% 100%, 100% 100%);
+  }
+
+  50% {
+    clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%);
+  }
+
+  62.5% {
+    clip-path: polygon(50% 50%, 100% 0, 100% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%);
+  }
+
+  75% {
+    clip-path: polygon(50% 50%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 50% 100%, 0% 100%);
+  }
+
+  100% {
+    clip-path: polygon(50% 50%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 0% 100%);
+  }
 }
+
 @keyframes spinner-oaa3wk {
-  0% {transform: scaleY(1) rotate(0deg);}
-  49.99% {transform: scaleY(1) rotate(135deg);}
-  50% {transform: scaleY(-1) rotate(0deg);}
-  100% {transform: scaleY(-1) rotate(-135deg);}
+  0% {
+    transform: scaleY(1) rotate(0deg);
+  }
+
+  49.99% {
+    transform: scaleY(1) rotate(135deg);
+  }
+
+  50% {
+    transform: scaleY(-1) rotate(0deg);
+  }
+
+  100% {
+    transform: scaleY(-1) rotate(-135deg);
+  }
 }
 
-
+//  BARRA DE NAVEGACION
 .navbar {
   position: fixed;
+  z-index: 9999;
   top: 0;
   left: 0;
   width: 100vw;
@@ -389,7 +421,7 @@
   }
 }
 
-.carritoVacio{
+.carritoVacio {
   margin: 500px auto;
   width: 500px;
   font-size: 16px;
@@ -397,14 +429,15 @@
   font-family: "Poppins";
 }
 
-.divCarritoTotal{
+.divCarritoTotal {
   display: flex;
   justify-content: space-between;
-  margin: 0 80px ;
+  margin: 0 80px;
   padding: 20px;
   border-radius: 10px;
   background-color: rgb(204, 204, 204);
-  button{
+
+  button {
     font-size: 20px;
     font-weight: 500;
     width: 150px;
@@ -414,63 +447,150 @@
     border: 2px solid #0c4d45;
     border-radius: 8px;
     color: white;
-      &:hover {
-        cursor: pointer;
-        background-color: #055171;
-      }
+
+    &:hover {
+      cursor: pointer;
+      background-color: #055171;
+    }
   }
 }
 
 
 // FORMULARIO
 
-.formulario{
-  margin: 400px 0;
+.formulario {
+  margin: 200px 0; 
   text-align: center;
-  input{
-    font-size: 25px;
-    width: 25vw;
-    height: 60px;
-    margin: 30px;
+  background-color: rgb(197, 197, 197);
+  padding: 50px 0;
+
+  form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  button{
+
+  input {
+    font-size: 20px;
+    width: 80vw;
+    height: 60px;
+    margin: 20px 0;
+    padding-left: 10px;
+  }
+
+  button {
     font-size: 20px;
     font-weight: 500;
     width: 100px;
-    margin: auto 0;
+    margin: 15px 0;
     height: 50px;
     background-color: #106d62b9;
     border: 2px solid #0c4d45;
     border-radius: 8px;
     color: white;
-      &:hover {
-        cursor: pointer;
-        background-color: #055171;
-      }
+
+    &:hover {
+      cursor: pointer;
+      background-color: #055171;
+    }
+  }
+}
+
+.codigoCompra{
+  width: 80vw;
+  margin: 50vh auto;
+  text-align: center;
+  font-family: "Poppins";
+  font-size: 11px;
+}
+
+.carrusel {
+  display: none;
+}
+
+.carrusel2 {
+  display: block;
+}
+
+
+.divCarousel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 140px 0;
+  padding: 60px 0;
+  font-family: "Poppins";
+  background: #cbf1ff;
+  background: -webkit-linear-gradient(90deg, #cbf1ff 0%, #9afcdb 100%);
+  background: linear-gradient(90deg, #cbf1ff 0%, #9afcdb 100%);
+  box-shadow: 1px 1px 20px #abe1f5;
+
+  .infoCarousel {
+    text-align: center;
+    width: 80%;
+    background-color: #3c5f7e;
+    box-shadow: 1px 1px 20px #3c5f7e8d;
+    color: whitesmoke;
+    margin: 60px 0;
+    border-radius: 10px;
+    padding: 10px 20px;
+  }
+
+}
+
+.divCadenas {
+  width: 84vw;
+  margin: 0 auto;
+  font-family: "Poppins";
+  border-top: 2px solid black;
+    h1 {
+      text-align: center;
+      font-size: 66px;
+    }
+  .divLadosCads {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    background-color: #07ffe21d;
+    border-radius: 10px;
+    padding: 20px 0;
+    .lados{
+      font-size: 35px;
+      font-weight: 600;
+      background-color: #0aa29845;
+      border: 2px solid #0aa2982f;
+      padding: 0 50px;
+    }
+    img {
+      width: 430px;
+    }
   }
 }
 
 
-
 // FOOTER
 
-.footer{
+.footer {
   margin-top: 200px;
   background-color: rgb(20, 20, 20);
   color: whitesmoke;
   font-size: 12px;
-  .divFooter{
-  display: flex;
-  justify-content: space-around;
-  width: 70vw;
-  margin: 0 auto;
-  img{
-    width: 100px;
+
+  .divFooter {
+    display: flex;
+    justify-content: space-around;
+    width: 70vw;
+    margin: 0 auto;
+
+    img {
+      width: 100px;
+    }
   }
-  }
-  FontAwesomeIcon{
+
+  FontAwesomeIcon {
     color: white;
-    
+
   }
 }
 
@@ -528,6 +648,23 @@
     display: none;
   }
 
+
+  .containerCW{
+    display: flex;
+    transition: all 0.5s;
+    
+    .numeroCarrito{
+      position: absolute;
+      right: 1px;
+      bottom: 10px;
+      background-color: #108073;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      color: white;
+      padding: 2px 8px;
+      border-radius: 50%;
+      font-weight: 700;
+    }
+  }
 
   .cartIcon {
     visibility: visible;
@@ -643,46 +780,48 @@
       font-size: 32px;
       margin-top: 0;
     }
+
     .cajaContador {
       display: flex;
       margin: 25px;
-  
+
       p {
         width: 20px;
         margin: 0 30px;
         font-size: 25px;
         font-weight: 500;
       }
-  
+
       .botonesContador {
         width: 100px;
         font-size: 25px;
         font-weight: 700;
         cursor: pointer;
         transition: all 0.4s;
-  
+
         &:disabled {
           opacity: 0.5;
           cursor: not-allowed;
         }
-  
+
         &:hover {
           background-color: #055171;
         }
       }
     }
-  
+
+
     .botonAgregaralCarrito {
       margin-left: 25px;
       width: 220px;
-      height: 40px; 
+      height: 40px;
       border: 2px solid #0c4d45;
       border-radius: 8px;
       color: rgb(240, 240, 240);
       font-size: 20px;
       font-family: "Poppins";
       transition: all 0.4s;
-  
+
       &:hover {
         cursor: pointer;
         background-color: #055171;
@@ -706,7 +845,7 @@
     }
   }
 
-  
+
 
 
   // SECCION DE TIPOS DE ROLLERS 
@@ -731,10 +870,10 @@
   }
 
   .tipoRollerCaja {
-    background: rgba(255,255,255,0.5);
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255,255,255,0.25);
+    background: rgba(255, 255, 255, 0.5);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     width: 28vw;
     height: 200px;
     margin: 40px 0;
@@ -769,26 +908,84 @@
     width: 15.5vw;
   }
 
+  //FORMULARIO
+
+  .formulario {
+    margin: 300px auto;
+    border: 2px solid rgb(161, 161, 161);
+    border-radius: 10px;
+    text-align: center;
+    padding: 80px 0;
+    width: 40vw;
+  
+    input {
+      font-size: 25px;
+      width: 25vw;
+      height: 60px;
+      margin: 20px;
+    }
+  
+    button{
+      width: 150px;
+     }
+  }
+
+  .codigoCompra{
+    font-size: 16px;
+  }
+
   .fondoTipos {
     background: linear-gradient(#fff, #fff 50%, #59c6bd 0, #055171);
 
   }
 
+  .carrusel {
+    display: block;
+  }
 
-  .footer{
+  .carrusel2 {
+    display: none;
+  }
+
+  .divCarousel {
+    flex-direction: row;
+    padding-top: 80px;
+    padding-left: 20px;
+    margin: 220px 0;
+
+    .infoCarousel {
+      width: 50%;
+      margin: 0 40px;
+
+      h2 {
+        font-size: 32px;
+        margin: 20px 0;
+      }
+
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+
+
+
+  .footer {
     margin-top: 200px;
     background-color: rgb(20, 20, 20);
     color: whitesmoke;
     font-size: 18px;
-    .divFooter{
-    display: flex;
-    justify-content: space-between;
-    width: 70vw;
-    margin: 0 auto;
+
+    .divFooter {
+      display: flex;
+      justify-content: space-between;
+      width: 70vw;
+      margin: 0 auto;
     }
-    FontAwesomeIcon{
+
+    FontAwesomeIcon {
       color: white;
-      
+
     }
   }
 

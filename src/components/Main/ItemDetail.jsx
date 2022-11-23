@@ -1,17 +1,14 @@
-import { useState } from "react";
 import { useContext } from "react";
-import { Link } from "react-router-dom";
 import img from "../../assets/translucida.jpg"; 
 import { CartContext } from "../../context/CartContext";
-import ItemContador from "./ItemContador";
-import {toast } from 'react-toastify';
+import ItemContador from "../componentes/ItemContador";
 
 
 const ItemDetail = ({ item }) => {
 
     const {agregarAlCarrito} = useContext(CartContext)
     
-    const botonAgr = (cantidad) => {
+    const botonAgr = (cantidad) => { 
         agregarAlCarrito(item, cantidad)
     }
 

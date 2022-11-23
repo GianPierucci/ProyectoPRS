@@ -1,11 +1,15 @@
-import SeccionTipos from "./SeccionTipos"
+import SeccTipos from "./SeccTipos"
 import SeccPrinc from "./SeccPrinc"
+import SeccInfoEmpresa from "./SeccInfoEmprea"
+import SeccInfoAyuda from "../componentes/SeccInfoAyuda"
 
 const  Main = () =>{
     return (
-        <div>
+        <div> 
             <SeccPrinc />
-            <SeccionTipos />
+            <SeccTipos />
+            <SeccInfoEmpresa />
+            <SeccInfoAyuda />
         </div>
     )
 }

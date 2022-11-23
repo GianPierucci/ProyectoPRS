@@ -1,6 +1,6 @@
 import { faEyeLowVision, faSun } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { NavLink } from "react-router-dom"
+import { Link } from "react-router-dom"
 import blackoutimg from "../../assets/blackout.jpg"
 import sunscreenimg from "../../assets/sunscreen2.jpg"
 
@@ -13,17 +13,17 @@ const SeccionTipos = () => {
                     <div className="tipoRollerCaja">
                         <img src={sunscreenimg} alt="" />
                         <div className="textoTipos">
-                            <NavLink to="/category/"><h2>Sunscreen</h2></NavLink>
+                            <Link to="/Catalogo/Sunscreen"><h2>Sunscreen</h2></Link>
                             <h3>Distintos grados de apertura <FontAwesomeIcon icon={faSun} /></h3>
                         </div>
                     </div>
                     <div className="tipoRollerCaja">
                         <img src={blackoutimg} alt="" />
                         <div className="textoTipos">
-                            <h2>Blackout</h2>
+                            <Link to="/Catalogo/Blackout"><h2>Blackout</h2></Link> 
                             <h3>Oscurecimineto total <FontAwesomeIcon icon={faEyeLowVision} /></h3>
                         </div>
-                    </div>
+                    </div> 
                 </div>
             </div>
             

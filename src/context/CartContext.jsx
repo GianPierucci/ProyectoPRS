@@ -14,11 +14,8 @@ const Provider = ({children}) => {
             setCarrito([...carrito, producto])
             toast.success("Se agregó al carrito!")
         } 
-        else{
-            toast.warning("Ya esta en el carrito") 
-        }
     }    
-
+ 
     const borrarUnidad = (id) => {
         const prodFiltrado = carrito.filter((prod) => prod.id !== id);
         setCarrito(prodFiltrado);

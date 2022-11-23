@@ -1,4 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import logoprs from "../../assets/prs.jpg"
 
 const Footer = () => {
@@ -6,7 +5,7 @@ const Footer = () => {
         <footer className="footer">
             <div className="divFooter">
                 <div>
-                    <img src={logoprs}/>
+                    <img src={logoprs} alt="logoprs"/>
                 </div>
                 <div>
                     <h4>PRS CORTINAS</h4>

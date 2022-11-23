@@ -2,7 +2,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faCartPlus } from '@fortawesome/free-solid-svg-icons';
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
 
@@ -16,7 +15,7 @@ const Carrito = (prod) => {
                 <h1>Ningún producto agregado <FontAwesomeIcon icon={faCartPlus} /></h1>
             </div>
         )
-    }
+    } 
 
     return (
         <div className="divCarrito">

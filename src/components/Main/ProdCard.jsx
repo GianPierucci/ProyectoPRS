@@ -1,5 +1,4 @@
-import blackoutimg from "../../assets/blackout.jpg";
-import { Link, NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 const ProdCard = ({ prod }) => {
     return (
@@ -14,7 +13,7 @@ const ProdCard = ({ prod }) => {
                 <div className="botonVerMas">
                     <NavLink to={`/Producto/${prod.id}`}><button type="button">Ver más</button></NavLink>
                 </div>
-            </div>
+            </div> 
 
         </div>
     )

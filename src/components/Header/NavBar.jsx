@@ -3,10 +3,10 @@ import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import logo from "../../assets/prs.jpg";
 import CartWidget from "./CartWidget";
-import { NavLink, Link } from "react-router-dom";
+import { Link, NavLink} from "react-router-dom";
 import { useState } from "react";
 
-
+ 
 const NavBar = () => {
 
     const [navR , setNavR] = useState(true) 
@@ -17,7 +17,7 @@ const NavBar = () => {
     
     return ( 
         <div className="navbar">
-            <img src={logo} alt="logo" className="logo" />
+            <Link to="/"><img src={logo} alt="logo" className="logo" /></Link> 
             <button onClick={abrirMenu} className="botonAbrir"><FontAwesomeIcon className="faBars" icon={faBars}/></button>
             <ul className={`ul ${navR ? "menu-abierto" : ""}`}>
                 <button onClick={abrirMenu} className="botonCerrar"><FontAwesomeIcon className="faXmark" icon={faXmark}/></button>

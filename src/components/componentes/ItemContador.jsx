@@ -1,11 +1,10 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 
 const ItemContador = ({inicial, stock, botonAgr}) => {
     
     const [contador, setContador] = useState(inicial);
 
-    const sumar = () => {
+    const sumar = () => { 
         contador < stock && setContador(contador + 1);
     }
     
